@@ -3,11 +3,11 @@ import csv
 import psycopg2
 
 db_params = {
-    'host': '/var/run/postgresql',
-    'database': 'nick',
-    'user': 'nick',
-    'password': 'SweetPotato99!',
-    'port': '5432'
+    'host': 'host',
+    'database': 'db',
+    'user': 'user',
+    'password': 'pword',
+    'port': 'port'
 }
 
 conn = psycopg2.connect(**db_params)
