@@ -1,12 +1,12 @@
 
 import './App.css';
-import TestData from './components/TestData';
-import AppHeader from './components/AppHeader';
+import MainLayout from './components/MainLayout';
+
 
 function App() {
   return (
-    <div className="App">
-      <AppHeader />
+    <div className="App" style={{ alignContent: 'center' }}>
+      <MainLayout />
     </div>
   );
 }

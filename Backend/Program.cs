@@ -10,6 +10,8 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new() { Title = "webapi", Version = "v1" });
 });
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddCors(options =>
