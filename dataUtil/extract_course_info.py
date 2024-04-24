@@ -1,7 +1,7 @@
 
 import csv
 
-f_path = '/home/nick/Documents/golf_courses_usa.csv'
+f_path = 'path/to/raw/csv'
 
 with open(f_path, 'r') as f:
     reader = csv.reader(f)
@@ -50,7 +50,7 @@ for row in rows:
                 'Phone': phone
             })
 
-output_file_path = '/home/nick/Documents/parsed_golf_courses.csv'
+output_file_path = 'path/to/parsed/csv'
 
 with open(output_file_path, mode='w', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=['Course Name', 'Street', 'City', 'State', 'Zip', 'Phone'])

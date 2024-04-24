@@ -13,7 +13,7 @@ db_params = {
 conn = psycopg2.connect(**db_params)
 cursor = conn.cursor()
 
-csv_file = '/home/nick/Documents/parsed_golf_courses.csv'
+csv_file = 'path/to/parsed/csv'
 
 with open(csv_file, mode='r') as file:
     reader = csv.reader(file)
