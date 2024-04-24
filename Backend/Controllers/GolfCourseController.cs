@@ -9,7 +9,8 @@ namespace Backend.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class GolfCourseController : ControllerBase {
+    public class GolfCourseController : ControllerBase 
+    {
         
         private IConfiguration Configuration;
 
@@ -19,7 +20,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet("autocomplete")]
-        public IActionResult Autocomplete(string query) {
+        public IActionResult Autocomplete(string query) 
+        {
 
 #pragma warning disable CS8600
             string connString = this.Configuration.GetConnectionString("DefaultConnection");
@@ -30,6 +32,7 @@ namespace Backend.Controllers
             var sql = @"SELECT c_info FROM courses WHERE c_name ILIKE '%' || @Query || '%' LIMIT 10";
 
             var suggestions = connection.Query<string>(sql, new { Query = query });
+            
             return Ok(suggestions);
         }
     }
