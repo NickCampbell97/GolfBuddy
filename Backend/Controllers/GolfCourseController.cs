@@ -10,7 +10,6 @@ namespace Backend.Controllers
     [ApiController]
     [Route("[controller]")]
     public class GolfCourseController : ControllerBase {
-        //private readonly string _connectionString = "Host=/var/run/postgresql;Port=5432;Database=nick;Username=nick;Password=SweetPotato99!";
         
         private IConfiguration Configuration;
 
@@ -22,21 +21,15 @@ namespace Backend.Controllers
         [HttpGet("autocomplete")]
         public IActionResult Autocomplete(string query) {
 
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+#pragma warning disable CS8600
             string connString = this.Configuration.GetConnectionString("DefaultConnection");
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+#pragma warning restore CS8600
 
             using var connection = new NpgsqlConnection(connString);
 
             var sql = @"SELECT c_info FROM courses WHERE c_name ILIKE '%' || @Query || '%' LIMIT 10";
 
             var suggestions = connection.Query<string>(sql, new { Query = query });
-
-            /*
-            Console.WriteLine($"SQL Query: {sql}");
-            Console.WriteLine($"Query Parameter: {query}");
-            Console.WriteLine($"Suggestions Count: {suggestions.Count()}");
-            */
             return Ok(suggestions);
         }
     }
