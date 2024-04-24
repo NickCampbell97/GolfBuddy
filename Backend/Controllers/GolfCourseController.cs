@@ -21,8 +21,10 @@ namespace Backend.Controllers
 
         [HttpGet("autocomplete")]
         public IActionResult Autocomplete(string query) {
-            
+
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             string connString = this.Configuration.GetConnectionString("DefaultConnection");
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
             using var connection = new NpgsqlConnection(connString);
 
