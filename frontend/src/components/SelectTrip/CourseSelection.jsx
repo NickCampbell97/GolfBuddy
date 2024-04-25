@@ -16,7 +16,7 @@ const CourseSelection = ({ courseValue, courseOptions, handleCourseChange, handl
             label="Search Golf Courses"
             variant="outlined"
             fullWidth
-            style={{ minWidth: '400px' }}
+            style={{ minWidth: '500px' }}
             />
             )}
         />

@@ -29,7 +29,7 @@ namespace Backend.Controllers
 
             using var connection = new NpgsqlConnection(connString);
 
-            var sql = @"SELECT c_info FROM courses WHERE c_name ILIKE '%' || @Query || '%' LIMIT 10";
+            var sql = @"SELECT c_info FROM courses WHERE c_name ILIKE @Query || '%' LIMIT 10";
 
             var suggestions = connection.Query<string>(sql, new { Query = query });
             

@@ -6,6 +6,8 @@ import CourseSelection from './CourseSelection';
 import axios from 'axios';
 import Header from './Header';
 
+//<DateSelection selectedDate={selectedDate} handleDateChange={handleDateChange} />
+
 function TripSelection() {
 
     const [courseValue, setCourseValue] = useState('');
@@ -38,7 +40,7 @@ function TripSelection() {
         <div style={{ display: 'inline-block', border: '1px solid grey' }}>
             <Header />
             <Stack spacing={1} direction="row" style={{ padding: '10px' }}>
-                <DateSelection selectedDate={selectedDate} handleDateChange={handleDateChange} />
+                
                 <CourseSelection courseValue={courseValue} courseOptions={courseOptions} handleCourseChange={handleCourseChange} handleInputChange={handleInputChange} />
             </Stack>
         </div>
