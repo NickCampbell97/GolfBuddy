@@ -5,8 +5,6 @@ using Microsoft.Extensions.Configuration;
 
 namespace Backend.Controllers
 {
-
-
     [ApiController]
     [Route("[controller]")]
     public class GolfCourseController : ControllerBase 

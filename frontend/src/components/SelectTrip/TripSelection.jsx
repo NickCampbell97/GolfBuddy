@@ -5,8 +5,7 @@ import DateSelection from './DateSelection';
 import CourseSelection from './CourseSelection';
 import axios from 'axios';
 import Header from './Header';
-
-//<DateSelection selectedDate={selectedDate} handleDateChange={handleDateChange} />
+import Button from '@mui/material/Button';
 
 function TripSelection() {
 
@@ -37,12 +36,13 @@ function TripSelection() {
     };
 
     return (
-        <div style={{ display: 'inline-block', border: '1px solid grey' }}>
+        <div style={{ display: 'inline-block', border: '1px solid grey', borderRadius: '5px' }}>
             <Header />
             <Stack spacing={1} direction="row" style={{ padding: '10px' }}>
-                
+                <DateSelection selectedDate={selectedDate} handleDateChange={handleDateChange} />
                 <CourseSelection courseValue={courseValue} courseOptions={courseOptions} handleCourseChange={handleCourseChange} handleInputChange={handleInputChange} />
             </Stack>
+            <Button variant="outlined" style={{ marginBottom: '15px' }}>Search</Button>
         </div>
     );
 

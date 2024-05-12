@@ -6,7 +6,7 @@ export default function Header() {
     return(
         <div>
             <Typography variant='h6' style={{ margin: '10px' }}>
-                Choose Date And Course
+                Choose Date And Golf Course
             </Typography>
         </div>
     );
