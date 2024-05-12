@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { Typography } from '@mui/material';
-import '../styles/UserPromptStyle.css';
+import '../styles/style.css';
 
 export default function UserPrompt() {
 
     var text = `
-    Ready to plan your next golf trip? Select the date and golf course you'd like to play
-    from our list of over 15,000 courses in the US. Click SEARCH to load historic weather, 
-    flight, and hotel info to help make your decision. Happy golfing, weekend warriors!
+    Select the date and golf course you'd like to play from our list of 
+    over 15,000 courses in the US to load historic weather, flight, and 
+    hotel info to plan out your next golf trip. Happy golfing, weekend warriors!
     `;
 
     return (

@@ -2,10 +2,15 @@
 .prompt-container {
     /*border: 1px solid gray; 
     border-radius: 5px;*/
-    padding: 10px;
     min-width: 775px;
     max-width: 775px;
     overflow: auto;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 0px;
+}
+
+.header-image {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
 }

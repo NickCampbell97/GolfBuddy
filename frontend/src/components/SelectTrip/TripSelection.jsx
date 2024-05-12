@@ -36,7 +36,7 @@ function TripSelection() {
     };
 
     return (
-        <div style={{ display: 'inline-block', border: '1px solid grey', borderRadius: '5px' }}>
+        <div style={{ display: 'inline-block', border: '1px solid grey', borderRadius: '5px', marginBottom: '10px' }}>
             <Header />
             <Stack spacing={1} direction="row" style={{ padding: '10px' }}>
                 <DateSelection selectedDate={selectedDate} handleDateChange={handleDateChange} />
