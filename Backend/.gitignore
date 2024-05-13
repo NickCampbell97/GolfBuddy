@@ -6,7 +6,7 @@
 # dotenv files
 .env
 
-api_options.txt
+api.txt
 
 appsettings.json
 appsettings.Development.json
