@@ -6,6 +6,8 @@
 # dotenv files
 .env
 
+api_options.txt
+
 appsettings.json
 appsettings.Development.json
 .editorconfig
